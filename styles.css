@@ -1809,3 +1809,32 @@ footer p{
     font-size:.95rem;
   }
 }
+
+
+@media(max-width:768px){
+
+  .topbar{
+    position:sticky;
+    top:0;
+    transition:all .35s ease;
+  }
+
+  .topbar.scrolled{
+    height:68px;
+    background:rgba(0,93,183,.92);
+    backdrop-filter:blur(10px);
+  }
+
+  .topbar.scrolled .brand-center img{
+    width:125px;
+  }
+
+  .topbar.scrolled .mobile-menu-btn{
+    top:18px;
+    font-size:1.8rem;
+  }
+
+  .topbar.scrolled + .mobile-menu{
+    top:68px;
+  }
+}
