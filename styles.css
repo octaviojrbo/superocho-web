@@ -133,15 +133,7 @@ a{
 }
 
 .brand-center img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center;
-  display:block;
-  background:transparent;
-  border:none;
-  box-shadow:none;
-  transition:all .4s ease;
+  pointer-events:none;
 }
 
 /* =========================
