@@ -1820,13 +1820,15 @@ footer p{
   }
 
   .topbar.scrolled{
-    height:68px;
-    background:rgba(0,93,183,.92);
+    height:72px;
+    background:rgba(0,93,183,.95);
     backdrop-filter:blur(10px);
+    overflow:hidden;
   }
 
   .topbar.scrolled .brand-center img{
     width:125px;
+    transform:translateY(-8px);
   }
 
   .topbar.scrolled .mobile-menu-btn{
@@ -1835,6 +1837,6 @@ footer p{
   }
 
   .topbar.scrolled + .mobile-menu{
-    top:68px;
+    top:72px;
   }
 }
