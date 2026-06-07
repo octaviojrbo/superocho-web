@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Super 8 | Catálogo</title>
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+
+    <nav class="nav-left">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+    </nav>
+
+    <div class="brand-center">
+      <img src="assets/logo-horizontal.png" alt="Super 8">
+    </div>
+
+    <nav class="nav-right">
+      <a href="catalogo.html">Catálogo</a>
+      <a href="promociones.html">Promociones</a>
+      <a href="mayoreo.html">Mayoreo</a>
+    </nav>
+
+  </header>
+
+    <!-- =========================
+        BANNER CATÁLOGO
+    ========================= -->
+    <section class="catalog-banner">
+    <img src="assets/banner-catalogo.png" alt="Catálogo Super 8">
+    </section>
+
+
+    <!-- =========================
+     BUSCADOR CATÁLOGO
+========================= -->
+<section class="catalog-search-section">
+  <input
+    type="text"
+    id="catalogSearchInput"
+    placeholder="Buscar producto..."
+  >
+</section>
+
+<!-- =========================
+     CATÁLOGO CON FILTROS
+========================= -->
+<section class="catalog-layout-section">
+
+  <aside class="catalog-sidebar">
+
+    <h3>Departamentos</h3>
+
+    <div id="catalogFilters"></div>
+
+  </aside>
+
+  <main class="catalog-content">
+
+    <div id="catalogSections"></div>
+
+  </main>
+
+</section>
+
+    <!-- =========================
+        JAVASCRIPT
+    ========================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

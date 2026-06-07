@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- =========================
+       CONFIGURACIÓN BÁSICA
+  ========================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Super 8 | Inicio</title>
+  <meta
+
+  name="description"
+
+  content="Super 8 en Córdoba y Orizaba. Encuentra regalos, juguetes, jarcería, bisutería, globos y productos para toda ocasión."
+
+>
+
+  <!-- Archivo de estilos -->
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Mercado Pago -->
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+
+<body>
+
+  <!-- =========================
+       LOADER / ANIMACIÓN INICIAL
+  ========================= -->
+  <div id="loader">
+    <img src="assets/mascota.jpeg" alt="Mascota Super 8" />
+    <p>Preparando un mundo de chácharas...</p>
+  </div>
+
+  <!-- =========================
+       HEADER / MENÚ PRINCIPAL
+  ========================= -->
+  <header class="topbar">
+
+  <!-- Menú izquierdo -->
+    <nav class="nav-left">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+    </nav>
+
+    <!-- Logo central -->
+    <div class="brand-center">
+      <img src="assets/logo-horizontal.png" alt="Super 8" />
+    </div>
+
+    <!-- Menú derecho -->
+    <nav class="nav-right">
+      <a href="catalogo.html">Catálogo</a>
+      <a href="promociones.html">Promociones</a>
+      <a href="mayoreo.html">Mayoreo</a>
+    </nav>
+
+  </header>
+
+  <!-- =========================
+       CONTENIDO PRINCIPAL
+  ========================= -->
+  <main>
+
+    <!-- =========================
+         HERO / PORTADA
+    ========================= -->
+    <section id="inicio" class="hero">
+      <div class="hero-text">
+        <span class="badge">superocho.com.mx</span>
+        <h1>Regalos, juguetes, jarcería, bisutería, globos y mucho más</h1>
+        <p>Un mundo de chácharas a tu alcance. Compra fácil, rápido y con envío hasta tu casa.</p>
+
+        <div class="hero-actions">
+          <a href="#productos" class="btn primary">Comprar ahora</a>
+          <a href="#sucursales" class="btn secondary">Ver sucursales</a>
+        </div>
+      </div>
+
+      <div class="hero-img">
+        <img class="mascot" src="assets/mascota.jpeg" alt="Mascota Super 8" />
+      </div>
+    </section>
+
+
+
+
+
+    <!-- =========================
+     PROMOCIÓN DESTACADA
+    ========================= -->
+    <section id="homePromotion" class="home-promotion"></section>
+
+
+
+
+    <!-- =========================
+     CATÁLOGO / CATEGORÍAS
+    ========================= -->
+    <section class="categories">
+
+      <h2>Catálogo</h2>
+
+      <div id="homeCategories" class="category-grid"></div>
+
+    </section>
+
+   
+    
+
+    
+
+   
+
+  </main>
+
+  <!-- =========================
+       CARRITO LATERAL
+  ========================= -->
+  <aside id="cart" class="cart-panel">
+    <div class="cart-header">
+      <h2>Carrito</h2>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+      <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+      <p>Envío estimado: <strong id="shipping">$0.00</strong></p>
+      <p>Total: <strong id="total">$0.00</strong></p>
+
+      <button class="btn primary full" onclick="checkout()">Pagar con Mercado Pago</button>
+
+      <small>Mercado Pago queda preparado como integración. Falta conectar credenciales reales.</small>
+    </div>
+  </aside>
+
+  <!-- =========================
+       FOOTER / PIE DE PÁGINA
+  ========================= -->
+  <footer>
+
+    <!-- Links inferiores -->
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="socials">
+
+      <a href="https://www.facebook.com/GrupoSuperocho"
+        target="_blank"
+        aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://instagram.com/GrupoSuperOcho"
+        target="_blank"
+        aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://whatsapp.com/channel/0029VbBPYS3Jpe8etmcLTI2e"
+        target="_blank"
+        aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+    </div>
+  
+
+    <!-- Nombre de la empresa -->
+    <h3>Super 8</h3>
+
+    <!-- Copyright con año automático -->
+    <p>Copyright © <span id="year"></span> Grupo Super 8. Todos los derechos reservados.</p>
+
+    <a href="login.html" class="admin-footer-link">Admin</a>
+  </footer>
+
+  <!-- =========================
+     JAVASCRIPT
+========================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Super 8 | Panel Admin</title>
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <header class="admin-header">
+
+    <h1>Panel Administrador</h1>
+
+    <div class="admin-header-actions">
+
+      <a href="index.html">
+        Ver sitio
+      </a>
+
+      <button
+        id="logoutBtn"
+        type="button"
+      >
+        Cerrar sesión
+      </button>
+
+    </div>
+
+  </header>
+
+ <main class="admin-container">
+
+  <section class="admin-dashboard-grid">
+
+    <section class="admin-card">
+
+      <h2>Resumen del sitio</h2>
+
+      <div class="admin-stats-grid">
+
+        <div class="admin-stat-card">
+          <span id="totalProducts">0</span>
+          <p>Productos</p>
+        </div>
+
+        <div class="admin-stat-card">
+          <span id="totalCategories">0</span>
+          <p>Categorías</p>
+        </div>
+
+        <div class="admin-stat-card">
+          <span id="totalSubcategories">0</span>
+          <p>Subcategorías</p>
+        </div>
+
+        <div class="admin-stat-card">
+          <span id="totalPromotions">0</span>
+          <p>Promociones</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="admin-card">
+
+      <h2>Estadísticas de productos</h2>
+
+      <div class="analytics-grid">
+
+        <div>
+          <h3>Más vistos</h3>
+          <div id="topViewedProducts" class="analytics-list"></div>
+        </div>
+
+        <div>
+          <h3>Más compartidos</h3>
+          <div id="topSharedProducts" class="analytics-list"></div>
+        </div>
+
+        <div>
+          <h3>Más ampliados</h3>
+          <div id="topZoomedProducts" class="analytics-list"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </section>
+
+ 
+
+    <section class="admin-card admin-selector-card">
+
+      <h2>Selecciona qué quieres crear o editar</h2>
+
+      <select id="adminSectionSelector">
+        <option value="" selected>Selecciona una opción</option>
+        <option value="products">Productos</option>
+        <option value="categories">Categorías</option>
+        <option value="promotions">Promociones</option>
+      </select>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+    <div id="productsAdminSection" class="admin-section-group">
+
+      <section class="admin-card">
+
+        <h2>Agregar producto al catálogo</h2>
+
+        <form id="productForm">
+
+          <label>Nombre del producto</label>
+          <input type="text" id="productName" required>
+
+          <label>Descripción</label>
+          <textarea id="productDescription" rows="4"></textarea>
+
+          <label>Precio</label>
+          <input type="text" id="productPrice" placeholder="$99">
+
+          <label>Categoría</label>
+          <select id="productCategory" required>
+            <option value="">Selecciona una categoría</option>
+          </select>
+
+          <label>Subcategoría</label>
+          <select id="productSubcategory">
+            <option value="">Sin subcategoría</option>
+          </select>
+
+          <label>Sucursales disponibles</label>
+          <div id="productStores" class="stores-checkbox-list"></div>
+
+          <label>Imagen del producto</label>
+          <div id="currentImagePreview"></div>
+
+          <div
+            class="tooltip-file-wrapper"
+            data-tooltip="Selección múltiple: Windows (Ctrl + clic) • macOS (⌘ Command + clic)"
+          >
+            <input
+              type="file"
+              id="productImage"
+              accept="image/*"
+              multiple
+            >
+          </div>
+
+          <small>
+            Si no seleccionas imágenes nuevas, se conservarán las actuales.
+          </small>
+
+          <button type="submit">
+            Guardar producto
+          </button>
+
+        </form>
+
+        <p id="adminMessage"></p>
+
+      </section>
+
+      <section class="admin-card">
+        <h2>Productos guardados</h2>
+
+        <input
+          type="text"
+          id="adminProductSearch"
+          placeholder="Buscar producto..."
+          class="admin-search-input"
+        >
+
+        <div id="adminProductsList"></div>
+      </section>
+
+    </div>
+
+    <!-- CATEGORÍAS -->
+    <div id="categoriesAdminSection" class="admin-section-group hidden-admin-section">
+
+      <section class="admin-card">
+
+        <h2>Categorías</h2>
+
+        <div class="category-type-selector">
+
+          <button
+            type="button"
+            id="newMainCategoryBtn"
+            class="edit-btn"
+          >
+            + Nueva categoría
+          </button>
+
+          <button
+            type="button"
+            id="newSubcategoryBtn"
+            class="move-btn"
+          >
+            + Nueva subcategoría
+          </button>
+
+        </div>
+
+        <form id="categoryForm">
+
+          <label id="categoryNameLabel">
+            Nombre de categoría
+          </label>
+
+          <input
+            type="text"
+            id="categoryName"
+            placeholder="Ej. Jarcería"
+            required
+          >
+
+          <label>Icono</label>
+          <input
+            type="text"
+            id="categoryIcon"
+            placeholder="Ej. 🧹"
+          >
+
+          <div id="parentCategoryWrapper">
+
+            <label>Categoría padre</label>
+
+            <select id="categoryParent">
+              <option value="">Selecciona una categoría</option>
+            </select>
+
+          </div>
+
+          <div id="showHomeWrapper">
+
+            <label>
+              <input type="checkbox" id="categoryShowHome">
+              Mostrar en inicio
+            </label>
+
+          </div>
+
+          <button type="submit">
+            Guardar categoría
+          </button>
+
+        </form>
+
+        <p id="categoryMessage"></p>
+
+      </section>
+
+      <section class="admin-card">
+        <h2>Categorías guardadas</h2>
+        <div id="adminCategoriesList"></div>
+      </section>
+
+    </div>
+
+    <!-- =========================
+     GRUPO PROMOCIONES
+    ========================= -->
+    <div id="promotionsAdminSection" class="admin-section-group hidden-admin-section">
+
+      <section class="admin-card">
+
+        <h2>Agregar promoción</h2>
+
+        <form id="promotionForm">
+
+          <label>Imagen de promoción</label>
+
+          <div id="currentPromotionImagePreview"></div>
+
+          <input
+            type="file"
+            id="promotionImage"
+            accept="image/*"
+            required
+          >
+
+          <small>
+            La imagen debe incluir todo el texto, precio o diseño de la promoción.
+          </small>
+
+          <label>
+            <input type="checkbox" id="promotionShowCatalog" checked>
+            Mostrar en promociones
+          </label>
+
+          <label>
+            <input type="checkbox" id="promotionShowHome">
+            Mostrar en inicio
+          </label>
+
+          <button type="submit">
+            Guardar promoción
+          </button>
+
+        </form>
+
+        <p id="promotionMessage"></p>
+
+      </section>
+
+      <section class="admin-card">
+
+        <h2>Promociones guardadas</h2>
+
+        <div id="adminPromotionsList"></div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>
