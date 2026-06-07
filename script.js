@@ -1018,4 +1018,10 @@ if(mobileMenuBtn && mobileMenu){
     mobileMenu.classList.toggle("active");
   });
 
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+
 }
