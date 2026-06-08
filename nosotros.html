@@ -25,36 +25,47 @@
   ========================= -->
   <header class="topbar">
 
-  <button class="mobile-menu-btn" id="mobileMenuBtn">
-    ☰
-  </button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button">
+      ☰
+    </button>
 
-  <nav class="nav-left">
-    <a href="index.html">Inicio</a>
+    <nav class="nav-left">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+    </nav>
+
+    <div class="brand-center">
+      <img src="assets/logo-horizontal.png" alt="Super 8">
+    </div>
+
+    <nav class="nav-right">
+      <a href="catalogo.html">Catálogo</a>
+      <a href="mayoreo.html">Mayoreo</a>
+
+      <div class="desktop-more">
+        <button class="desktop-more-btn" type="button">☰</button>
+
+        <div class="desktop-more-menu">
+          <a href="servicios.html">Servicios</a>
+          <a href="contactanos.html">Contáctanos</a>
+          <a href="promociones.html">Promociones</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">Inicio</a>
     <a href="nosotros.html">Nosotros</a>
     <a href="sucursales.html">Sucursales</a>
-  </nav>
-
-  <div class="brand-center">
-    <img src="assets/logo-horizontal.png" alt="Super 8">
-  </div>
-
-  <nav class="nav-right">
+    <a href="servicios.html">Servicios</a>
     <a href="catalogo.html">Catálogo</a>
     <a href="promociones.html">Promociones</a>
     <a href="mayoreo.html">Mayoreo</a>
-  </nav>
-
-</header>
-
-<div class="mobile-menu" id="mobileMenu">
-  <a href="/" onclick="window.location.href='/'">Inicio</a>
-  <a href="nosotros.html">Nosotros</a>
-  <a href="sucursales.html">Sucursales</a>
-  <a href="catalogo.html">Catálogo</a>
-  <a href="promociones.html">Promociones</a>
-  <a href="mayoreo.html">Mayoreo</a>
-</div>
+    <a href="contactanos.html">Contáctanos</a>
+  </div>
 
   <!-- =========================
        BANNER DE HISTORIA
