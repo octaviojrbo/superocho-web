@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- =========================
+       CONFIGURACIÓN BÁSICA
+  ========================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#005db7">
+
+  <title>Super 8 | Inicio</title>
+  <meta
+
+  name="description"
+
+  content="Super 8 en Córdoba y Orizaba. Encuentra regalos, juguetes, jarcería, bisutería, globos y productos para toda ocasión."
+
+>
+
+  <!-- Archivo de estilos -->
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Mercado Pago -->
+  <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+
+<body class="page-index">
+
+  <!-- =========================
+       LOADER / ANIMACIÓN INICIAL
+  ========================= -->
+  <div id="loader">
+    <img src="assets/mascota.jpeg" alt="Mascota Super 8" />
+    <p>Preparando un mundo de chácharas...</p>
+  </div>
+
+  <!-- =========================
+       HEADER / MENÚ PRINCIPAL
+  ========================= -->
+  <header class="topbar">
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="nav-left" aria-label="Navegación principal izquierda">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#" class="coming-soon-link" aria-disabled="true" title="Próximamente">Sucursales</a>
+    </nav>
+
+    <a class="brand-center" href="index.html" aria-label="Ir al inicio de Super 8">
+      <img src="assets/logo-horizontal.png" alt="Super 8">
+    </a>
+
+    <nav class="nav-right" aria-label="Navegación principal derecha">
+      <a href="mayoreo.html">Mayoreo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contactanos.html">Contáctanos</a>
+    </nav>
+
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="#" class="coming-soon-link" aria-disabled="true">Sucursales <small>Próximamente</small></a>
+    <a href="mayoreo.html">Mayoreo</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contactanos.html">Contáctanos</a>
+  </div>
+
+  <!-- =========================
+       CONTENIDO PRINCIPAL
+  ========================= -->
+  <main>
+
+  <!-- =========================
+          HERO / PORTADA
+  ========================= -->
+    <section class="hero">
+
+      <div class="hero-text">
+
+        <img
+          src="assets/todo-para-tu-hogar.png"
+          alt="Todo para tu hogar"
+          class="hero-slogan"
+        >
+
+        <h1>
+          Todo lo que buscas<br>
+          en un solo lugar
+        </h1>
+
+        <p>
+          Jarcería, regalos, bisutería, juguetes,
+          globos y mucho más para tu hogar,
+          negocio y celebraciones.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="btn primary coming-soon-link" aria-disabled="true">
+            Sucursales próximamente
+          </a>
+
+          <a href="contactanos.html" class="btn secondary">
+            Contáctanos
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-img">
+        <img
+          src="assets/mascota-hero.png"
+          alt="Mascota Super 8"
+          class="mascot mascot-no-bg"
+        >
+      </div>
+
+    </section>
+
+
+
+
+
+    <!-- =========================
+     PROMOCIÓN DESTACADA
+    ========================= -->
+    <section id="homePromotion" class="home-promotion"></section>
+
+   
+    
+
+    
+
+   
+
+  </main>
+
+  <!-- =========================
+       CARRITO LATERAL
+  ========================= -->
+  <aside id="cart" class="cart-panel">
+    <div class="cart-header">
+      <h2>Carrito</h2>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+      <p>Subtotal: <strong id="subtotal">$0.00</strong></p>
+      <p>Envío estimado: <strong id="shipping">$0.00</strong></p>
+      <p>Total: <strong id="total">$0.00</strong></p>
+
+      <button class="btn primary full" onclick="checkout()">Pagar con Mercado Pago</button>
+
+      <small>Mercado Pago queda preparado como integración. Falta conectar credenciales reales.</small>
+    </div>
+  </aside>
+
+  <!-- =========================
+       FOOTER / PIE DE PÁGINA
+  ========================= -->
+  <footer>
+
+    <!-- Links inferiores -->
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#" class="coming-soon-link" aria-disabled="true">Sucursales</a>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="socials">
+
+      <a href="https://www.facebook.com/GrupoSuperocho"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://instagram.com/GrupoSuperOcho"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://whatsapp.com/channel/0029VbBPYS3Jpe8etmcLTI2e"
+        target="_blank" rel="noopener noreferrer"
+        aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+    </div>
+  
+
+    <!-- Nombre de la empresa -->
+    <h3>Super 8</h3>
+
+    <!-- Copyright con año automático -->
+    <p>Copyright © <span id="year"></span> Grupo Super 8. Todos los derechos reservados.</p>
+
+    <a href="login.html" class="admin-footer-link">Admin</a>
+  </footer>
+
+  <!-- =========================
+     JAVASCRIPT
+========================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
+

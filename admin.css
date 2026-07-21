@@ -1,0 +1,834 @@
+/* =========================
+   ADMIN GENERAL
+========================= */
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f7ff;
+  color:#001b5b;
+}
+
+/* =========================
+   HEADER ADMIN
+========================= */
+
+.admin-header{
+  background:#005db7;
+  color:white;
+  padding:25px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.admin-header h1{
+  margin:0;
+  font-size:1.8rem;
+}
+
+.admin-header a{
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.admin-container{
+  padding:50px 7%;
+  display:flex;
+  flex-direction:column;
+  gap:45px;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.admin-card{
+  background:white;
+  width:100%;
+  max-width:950px;
+  margin:0 auto;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  box-sizing:border-box;
+}
+
+.admin-card h2{
+  margin-top:0;
+  color:#001b5b;
+}
+
+/* =========================
+   FORMULARIOS
+========================= */
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+label{
+  font-weight:800;
+  margin-top:10px;
+}
+
+input,
+textarea,
+select{
+  padding:14px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  font-size:1rem;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+button{
+  background:#ed111a;
+  color:white;
+  border:none;
+  border-radius:14px;
+  padding:14px 18px;
+  font-size:1rem;
+  font-weight:900;
+  cursor:pointer;
+}
+
+button:hover{
+  opacity:.9;
+}
+
+#adminMessage,
+#categoryMessage{
+  margin-top:20px;
+  font-weight:800;
+}
+
+/* =========================
+   PRODUCTOS ADMIN
+========================= */
+
+#adminProductsList{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.admin-product-item{
+  display:grid;
+  grid-template-columns:90px 1fr auto;
+  gap:18px;
+  align-items:center;
+  border:1px solid #eee;
+  border-radius:16px;
+  padding:14px;
+  background:white;
+}
+
+.admin-product-item img{
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.admin-product-item h3{
+  margin:0 0 6px;
+  color:#001b5b;
+}
+
+.admin-product-item p{
+  margin:0 0 6px;
+  color:#555;
+}
+
+.admin-product-item strong{
+  display:block;
+  color:#ed111a;
+}
+
+/* =========================
+   ACCIONES
+========================= */
+
+.admin-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.admin-actions button{
+  white-space:nowrap;
+}
+
+.edit-btn{
+  background:#005db7;
+}
+
+.delete-btn{
+  background:#ed111a;
+}
+
+/* =========================
+   IMAGEN ACTUAL
+========================= */
+
+#currentImagePreview{
+  margin:10px 0;
+}
+
+#currentImagePreview p{
+  font-weight:800;
+  margin-bottom:8px;
+}
+
+.current-preview-img{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+/* =========================
+   CATEGORÍAS ADMIN
+========================= */
+
+#adminCategoriesList{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:18px;
+  width:100%;
+}
+
+.admin-category-item{
+  background:white;
+  border:1px solid #eee;
+  border-radius:18px;
+  padding:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:18px;
+  min-height:150px;
+}
+
+.admin-category-item strong{
+  display:block;
+  color:#001b5b;
+  font-size:1.15rem;
+}
+
+.admin-category-item small{
+  display:block;
+  color:#555;
+  margin-top:6px;
+}
+
+.admin-category-item .admin-actions{
+  display:flex;
+  gap:10px;
+}
+
+.admin-category-item button{
+  margin:0;
+  width:100%;
+  padding:11px 14px;
+  font-size:.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:700px){
+  .admin-product-item{
+    grid-template-columns:1fr;
+  }
+
+  #adminCategoriesList{
+    grid-template-columns:1fr;
+  }
+
+  .admin-actions{
+    justify-content:flex-start;
+    flex-wrap:wrap;
+  }
+}
+
+
+
+/* =========================
+   SELECTOR ADMIN
+========================= */
+
+.admin-selector-card{
+  text-align:center;
+}
+
+#adminSectionSelector{
+  max-width:350px;
+  margin:auto;
+  display:block;
+}
+
+.admin-section-group{
+  display:flex;
+  flex-direction:column;
+  gap:45px;
+}
+
+.hidden-admin-section{
+  display:none;
+}
+
+
+
+.admin-products-category{
+  margin-top:25px;
+  padding:12px 0;
+  border-bottom:2px solid #eef1f8;
+}
+
+.admin-products-category h3{
+  margin:0;
+  color:#001b5b;
+  font-size:1.4rem;
+}
+
+
+.move-btn{
+  background:#15c56d !important;
+  color:white;
+}
+
+.move-btn:hover{
+  background:#10a95d !important;
+}
+
+
+
+/* =========================
+   ESTADÍSTICAS ADMIN
+========================= */
+
+.admin-stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:18px;
+}
+
+.admin-stat-card{
+  background:#f4f7ff;
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+  border:1px solid #e7eaf3;
+}
+
+.admin-stat-card span{
+  display:block;
+  font-size:2.3rem;
+  font-weight:900;
+  color:#005db7;
+}
+
+.admin-stat-card p{
+  margin:8px 0 0;
+  font-weight:800;
+  color:#001b5b;
+}
+
+@media(max-width:700px){
+  .admin-stats-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* =========================
+   SUCURSALES CHECKBOX
+========================= */
+
+.stores-checkbox-list{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:10px;
+  margin-top:8px;
+}
+
+.store-checkbox-item{
+  background:#f4f7ff;
+  border:1px solid #e7eaf3;
+  border-radius:12px;
+  padding:12px;
+  font-weight:700;
+  color:#001b5b;
+}
+
+.store-checkbox-item input{
+  margin-right:8px;
+}
+
+@media(max-width:700px){
+  .stores-checkbox-list{
+    grid-template-columns:1fr;
+  }
+}
+
+
+.show-btn{
+  background:#14aa4b;
+}
+
+.hide-btn{
+  background:#f39c12;
+}
+
+
+.tooltip-btn{
+  position: relative;
+}
+
+.tooltip-btn::after{
+  content: attr(data-tooltip);
+
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: #1e293b;
+  color: white;
+
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  font-size: 12px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.15s ease;
+
+  z-index: 999;
+}
+
+.tooltip-btn:hover::after{
+  opacity: 1;
+}
+
+
+.category-card-admin{
+  position:relative;
+}
+
+.category-products-count{
+  position:absolute;
+  top:18px;
+  right:18px;
+  background:#f4f7ff;
+  color:#001b5b;
+  border:1px solid #dbe3f5;
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:.8rem;
+  font-weight:900;
+}
+
+
+.current-images-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(90px, 1fr));
+  gap:12px;
+  margin-top:12px;
+}
+
+.current-images-grid img{
+  width:100%;
+  height:90px;
+  object-fit:cover;
+  border-radius:12px;
+  box-shadow:0 6px 16px rgba(0,0,0,.12);
+}
+
+.admin-mini-carousel{
+  position:relative;
+  width:90px;
+}
+
+.admin-carousel-images{
+  display:flex;
+  overflow:hidden;
+  scroll-behavior:smooth;
+}
+
+.admin-carousel-images img{
+  min-width:90px;
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.admin-carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:20px;
+  height:20px;
+  border:none;
+  border-radius:50%;
+  background:rgba(0,27,91,.75);
+  color:white;
+  cursor:pointer;
+  z-index:5;
+  font-size:10px;
+  line-height:20px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.admin-carousel-btn.prev{
+  left:3px;
+}
+
+.admin-carousel-btn.next{
+  right:3px;
+}
+
+.hidden-carousel-btn{
+  display:none !important;
+}
+
+
+.multi-image-help{
+  display:block;
+  margin-top:6px;
+  color:#666;
+  font-size:13px;
+  font-weight:600;
+}
+
+
+.tooltip-file-wrapper{
+  position:relative;
+  display:block;
+}
+
+.tooltip-file-wrapper::after{
+  content:attr(data-tooltip);
+
+  position:absolute;
+  bottom:120%;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:#1e293b;
+  color:white;
+
+  padding:10px 14px;
+  border-radius:10px;
+
+  font-size:13px;
+  font-weight:600;
+
+  white-space:nowrap;
+
+  opacity:0;
+  pointer-events:none;
+
+  transition:opacity .2s ease;
+
+  z-index:999;
+}
+
+.tooltip-file-wrapper:hover::after{
+  opacity:1;
+}
+
+
+
+/* =========================
+   SUBCATEGORÍAS
+========================= */
+
+.admin-subcategories-list{
+  margin-top:18px;
+  padding-top:15px;
+  border-top:1px solid #e5e7eb;
+}
+
+.admin-subcategory-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+
+  padding:10px 0 10px 20px;
+
+  color:#334155;
+  font-size:.95rem;
+}
+
+.admin-subcategory-item .admin-actions{
+  display:flex;
+  gap:8px;
+}
+
+.admin-subcategory-item .edit-btn,
+.admin-subcategory-item .delete-btn{
+  padding:6px 12px;
+  font-size:.8rem;
+}
+
+
+.category-type-selector{
+  display:flex;
+  gap:12px;
+  margin-bottom:25px;
+}
+
+#parentCategoryWrapper{
+  display:none;
+}
+
+
+.admin-products-subcategory{
+  margin:18px 0 8px;
+  padding:10px 14px;
+  background:#f4f7ff;
+  border-left:4px solid #005db7;
+  border-radius:10px;
+}
+
+.admin-products-subcategory h4{
+  margin:0;
+  color:#001b5b;
+  font-size:1.05rem;
+}
+
+
+.admin-search-input{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid #d9d9d9;
+  border-radius:10px;
+  margin:12px 0 20px;
+  font-size:15px;
+  box-sizing:border-box;
+}
+
+.admin-search-input:focus{
+  outline:none;
+  border-color:#005db7;
+}
+
+
+
+.admin-promo-item{
+  display:grid;
+  grid-template-columns:150px 1fr auto;
+  gap:18px;
+  align-items:center;
+  border:1px solid #eee;
+  border-radius:16px;
+  padding:14px;
+  background:white;
+  margin-bottom:15px;
+}
+
+.admin-promo-item img{
+  width:150px;
+  height:90px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+@media(max-width:700px){
+  .admin-promo-item{
+    grid-template-columns:1fr;
+  }
+
+  .admin-promo-item img{
+    width:100%;
+    height:auto;
+  }
+}
+
+
+.analytics-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:22px;
+}
+
+.analytics-grid h3{
+  color:#001b5b;
+  margin-top:0;
+}
+
+.analytics-list{
+  background:#f4f7ff;
+  border-radius:16px;
+  padding:16px;
+  min-height:120px;
+}
+
+.analytics-item{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  border-bottom:1px solid #dde5f5;
+  padding:10px 0;
+  font-size:.95rem;
+}
+
+.analytics-item:last-child{
+  border-bottom:none;
+}
+
+.analytics-item strong{
+  color:#001b5b;
+}
+
+.analytics-item span{
+  font-weight:900;
+  color:#ed111a;
+}
+
+@media(max-width:850px){
+  .analytics-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+.admin-dashboard-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+.admin-dashboard-grid > .admin-card{
+  min-width:0;
+}
+
+.admin-dashboard-grid .admin-stats-grid{
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:18px;
+}
+
+.admin-dashboard-grid .admin-stat-card{
+  min-width:0;
+}
+
+.admin-dashboard-grid .analytics-grid{
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+.admin-dashboard-grid .analytics-list{
+  min-height:auto;
+}
+
+@media(max-width:1200px){
+  .admin-dashboard-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+.admin-dashboard-grid .admin-card{
+  height:100%;
+}
+
+
+.admin-dashboard-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+
+.admin-dashboard-grid > .admin-card{
+  max-width:none;
+  margin:0;
+  width:100%;
+  box-sizing:border-box;
+}
+
+.admin-dashboard-grid .admin-stats-grid{
+  grid-template-columns:repeat(2, 1fr);
+}
+
+.admin-dashboard-grid .analytics-grid{
+  grid-template-columns:1fr;
+}
+
+@media(max-width:1200px){
+  .admin-dashboard-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+
+.admin-header-actions{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+#logoutBtn{
+  background:#ed111a;
+  padding:10px 16px;
+  font-size:.9rem;
+}
+
+
+.login-section{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f4f7ff;
+  padding:40px;
+}
+
+.login-card{
+  width:100%;
+  max-width:520px;
+  background:white;
+  padding:40px;
+  border-radius:24px;
+  box-shadow:0 15px 35px rgba(0,0,0,.12);
+  text-align:center;
+}
+
+.login-logo{
+  width:180px;
+  height:auto;
+  display:block;
+  margin:0 auto 25px;
+}
+
+.login-card input{
+  width:100%;
+  box-sizing:border-box;
+  margin-bottom:14px;
+}
+
+.login-card button{
+  width:100%;
+}

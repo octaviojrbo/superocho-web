@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#005db7">
+
+  <title>Super 8 | Catálogo</title>
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="page-catalogo">
+
+  <!-- HEADER -->
+  <header class="topbar">
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="nav-left" aria-label="Navegación principal izquierda">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#" class="coming-soon-link" aria-disabled="true" title="Próximamente">Sucursales</a>
+    </nav>
+
+    <a class="brand-center" href="index.html" aria-label="Ir al inicio de Super 8">
+      <img src="assets/logo-horizontal.png" alt="Super 8">
+    </a>
+
+    <nav class="nav-right" aria-label="Navegación principal derecha">
+      <a href="mayoreo.html">Mayoreo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contactanos.html">Contáctanos</a>
+    </nav>
+
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="#" class="coming-soon-link" aria-disabled="true">Sucursales <small>Próximamente</small></a>
+    <a href="mayoreo.html">Mayoreo</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contactanos.html">Contáctanos</a>
+  </div>
+
+    <!-- =========================
+        BANNER CATÁLOGO
+    ========================= -->
+    <section class="catalog-banner">
+    <img src="assets/banner-catalogo.png" alt="Catálogo Super 8">
+    </section>
+
+
+    <!-- =========================
+     BUSCADOR CATÁLOGO
+========================= -->
+<section class="catalog-search-section">
+  <input
+    type="text"
+    id="catalogSearchInput"
+    placeholder="Buscar producto..."
+  >
+</section>
+
+<!-- =========================
+     CATÁLOGO CON FILTROS
+========================= -->
+<section class="catalog-layout-section">
+
+  <aside class="catalog-sidebar">
+
+    <h3>Departamentos</h3>
+
+    <div id="catalogFilters"></div>
+
+  </aside>
+
+  <main class="catalog-content">
+
+    <div id="catalogSections"></div>
+
+  </main>
+
+</section>
+
+    <!-- =========================
+        JAVASCRIPT
+    ========================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#005db7">
+
+  <title>Login Admin | Super 8</title>
+
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <section class="login-section">
+
+    <div class="login-card">
+
+      <img
+        src="assets/logo-horizontal.png"
+        alt="Super 8"
+        class="login-logo"
+      >
+
+      <h1>Acceso administrador</h1>
+
+      <form id="loginForm" autocomplete="on">
+
+        <input
+          type="email"
+          id="loginEmail"
+          name="username"
+          placeholder="Correo"
+          autocomplete="username"
+          inputmode="email"
+          autocapitalize="none"
+          autocorrect="off"
+          spellcheck="false"
+          required
+        >
+
+        <input
+          type="password"
+          id="loginPassword"
+          name="password"
+          placeholder="Contraseña"
+          autocomplete="current-password"
+          required
+        >
+
+        <button id="loginBtn" type="submit">
+          Iniciar sesión
+        </button>
+
+      </form>
+
+      <p id="loginMessage"></p>
+
+    </div>
+
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="login.js"></script>
+
+</body>
+</html>

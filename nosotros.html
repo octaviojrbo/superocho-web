@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- =========================
+       CONFIGURACIÓN BÁSICA
+  ========================= -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Super 8 | Nosotros</title>
+
+  <!-- Archivo de estilos principal -->
+  <link rel="icon" type="image/jpeg" href="favicon.jpeg">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Iconos de redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER / MENÚ PRINCIPAL
+  ========================= -->
+  <header class="topbar">
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="nav-left" aria-label="Navegación principal izquierda">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="#" class="coming-soon-link" aria-disabled="true" title="Próximamente">Sucursales</a>
+    </nav>
+
+    <a class="brand-center" href="index.html" aria-label="Ir al inicio de Super 8">
+      <img src="assets/logo-horizontal.png" alt="Super 8">
+    </a>
+
+    <nav class="nav-right" aria-label="Navegación principal derecha">
+      <a href="mayoreo.html">Mayoreo</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="contactanos.html">Contáctanos</a>
+    </nav>
+
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="#" class="coming-soon-link" aria-disabled="true">Sucursales <small>Próximamente</small></a>
+    <a href="mayoreo.html">Mayoreo</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="contactanos.html">Contáctanos</a>
+  </div>
+
+  <!-- =========================
+       BANNER DE HISTORIA
+  ========================= -->
+  <section class="about-story-section">
+
+  <div class="about-story-card">
+
+    <div class="about-story-text">
+      <span>Nuestra historia</span>
+      <h2>Conoce más de Super 8</h2>
+
+      <p>
+        Super 8 nació en el año 2002 con la apertura de una pequeña tienda en Córdoba, Veracruz. Desde nuestros inicios, buscamos ofrecer precios competitivos, variedad de productos y una atención cercana.
+      </p>
+
+      <p>
+        Gracias a la confianza de nuestros clientes, crecimos hasta trasladarnos a nuestra sucursal Matriz, ampliando nuestra variedad de productos y mejorando el servicio.
+      </p>
+
+      <p>
+        Hoy somos una empresa orgullosamente veracruzana, comprometida con la comunidad, el servicio y los precios accesibles.
+      </p>
+    </div>
+
+    <div class="about-story-image">
+      <img src="assets/matriz.jpeg" alt="Sucursal Matriz Super 8">
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="about-info-section">
+
+  <div class="about-info-card">
+    <h3>Visión</h3>
+    <p>
+      Consolidarnos como una empresa líder en la distribución de productos nacionales e importados, superando constantemente las expectativas de nuestros clientes.
+    </p>
+  </div>
+
+  <div class="about-info-card">
+    <h3>Misión</h3>
+    <p>
+      Ser una empresa responsable con nuestro personal, clientes y comunidad, mejorando nuestros procesos para ofrecer un servicio ágil, eficiente y cercano.
+    </p>
+  </div>
+
+  <div class="about-info-card">
+    <h3>Nuestros clientes</h3>
+    <p>
+      Satisfacer con calidad y oportunidad las necesidades de nuestros clientes, ofreciendo variedad de productos, precios accesibles y opciones prácticas.
+    </p>
+  </div>
+
+</section>
+
+
+
+  <!-- =========================
+       FOOTER / PIE DE PÁGINA
+  ========================= -->
+  <footer>
+
+    <!-- Links inferiores -->
+    <div class="footer-links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="sucursales.html">Sucursales</a>
+    </div>
+
+    <!-- Redes sociales -->
+    <div class="socials">
+
+      <a href="https://www.facebook.com/GrupoSuperocho"
+        target="_blank"
+        aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+
+      <a href="https://instagram.com/GrupoSuperOcho"
+        target="_blank"
+        aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="https://whatsapp.com/channel/0029VbBPYS3Jpe8etmcLTI2e"
+        target="_blank"
+        aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+    </div>
+
+    <!-- Nombre de la empresa -->
+    <h3>Super 8</h3>
+
+    <!-- Copyright con año automático -->
+    <p>Copyright © <span id="year"></span> Grupo Super 8. Todos los derechos reservados.</p>
+
+  </footer>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+  <script src="script.js"></script>
+
+</body>
+</html>
